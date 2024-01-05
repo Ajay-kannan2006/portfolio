@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Project</title>
+    <style>
+      *{
+    padding: 0;
+    margin: 0;
+    color:black;
+}
+.main_box{
+    height:100vh;
+    background-color: #AFC8AD;
+}
+.sidebar_menu{
+    background-color:hsl(130, 17%, 60%);
+    height:100%;
+    width:300px;
+    position: absolute;
+    left: -300px;
+    transition:left 0.5s ease-in 0s;
+    z-index:2;
+}
+#check{
+    display:none;
+}
+.btn_one i{
+    color:black;
+    position:absolute;
+    font-size:25px;
+    top:20px;
+    left:5px;
+}
+.btn_two i{
+    color:black;
+    position:absolute;
+    font-size:25px;
+    top:20px;
+    left:275px;
+}
+.sidebar_menu .logo a{
+    color: white;
+    position:absolute;
+    font-size:25px;
+    top:20px;
+    left:45px;
+    text-decoration: none;
+}
+.sidebar_menu .menu{
+    position:absolute;
+    top:100px;
+    width: 100%;
+}
+.sidebar_menu .menu ul li {
+    color:black;
+    font-size:25px;
+    padding:15px 10px 15px 14px;
+    border-radius: 1px;
+    transition: box-shadow 1s ease 0s;
+}
+.sidebar_menu .menu ul li  a{
+    color:black;
+    font-size:25px ;
+    text-decoration: none; 
+    padding:15px 10px 15px 10px;
+    
+}
+.social_media {
+    position:absolute;
+    top:575px;
+    left:45px;
+}
+.social_media a{
+    color:rgba(255, 255, 255, 0.5);
+    padding-left:20px;
+}
+.social_media a :hover{
+    color:rgba(255, 255,255, 1);
+    font-size:20px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.096);
+}
+#check:checked~.sidebar_menu{
+    position: absolute;
+    left: 0px;
+}
+#check:checked~.btn_one{
+    display:none;
+}
+.menu li:hover{
+    box-shadow: 2px 2px 15px black;
+}
+h1{
+    position: absolute;
+    top: 30px;
+    left: 45%;
+}
+.content{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    z-index:1;
+}
+#about{
+    position: absolute;
+    height:500px;
+    width:100%;
+    top: 100px;
+}
+#work {
+    position: absolute;
+    height:500px;
+    width:100%;
+    top: 300px;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main_box">
+      <input type="checkbox" id="check" />
+      <div class="btn_one">
+        <label for="check">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+      </div>
+
+      <div class="sidebar_menu">
+        <div class="logo">
+          <a href="#">AJAY</a>
+        </div>
+
+        <div class="btn_two">
+          <label for="check">
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+        </div>
+
+        <div class="menu">
+          <ul type="none">
+            <li>
+              <span class="material-symbols-outlined">
+                emoji_food_beverage
+              </span>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">
+                work_history
+                </span>
+              <a href="#">works</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-photo-film"></i>
+              <a href="#">Certificate</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-calendar-days"></i>
+              <a href="#"></a>
+            </li>
+            <li>
+              <i class="fa-solid fa-store"></i>
+              <a href="#">Store</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <i class="fa-regular fa-comments"></i>
+              <a href="#">Feedback</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="social_media">
+          <ul>
+            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div>
+        <h1>Portfolio</h1>
+      </div>
+      <div id="about">
+        <h2>About</h2><hr>
+        <div>
+          <h3>NAME:</h3>
+          <p>Ajay K K</p>
+      </div>
+      <div>
+          <h3>MOBILE NUMBER :</h3>
+          <p>6381861035</p>
+      </div>
+      <div>
+          <h3>EMAIL :</h3>
+          <p>ajaykannan1001200635@gmaail.com</p>
+      </div>
+      </div>
+      <div id="work">
+        <h2>Work</h2><hr>
+        <p>I have designed a move ads poster using html and css.It took long time to complete this.You can see my work by clicking <a href="https://1drv.ms/u/s!AkVOVWJuMM5kgTKWRVQZwcoDmjP5?e=7wmxKj"></a></p>
+      </div>
+    </div>
+  </body>
+</html>
